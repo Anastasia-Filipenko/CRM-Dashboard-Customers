@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/index.css">
+  <script defer src="bundle.js"></script></head>
+  <body>
+    <nav> 
+          <svg class="sidebar__menu">
+            <use xlink:href="../assets/sprite.svg#icon-menu"></use>
+          </svg>
+      <aside class="sidebar">
+        <div class="sidebar__container">
+          <div class="sidebar__container__nav"> 
+            <p class="sidebar__logo"> 
+                  <svg class="sidebar__logo__icon">
+                    <use xlink:href="../assets/sprite.svg#icon-setting"></use>
+                  </svg>Dashboard <span class="sidebar__logo__span">v.01</span>
+            </p>
+            <ul class="sidebar__list">
+              <li class="sidebar__item">
+                    <svg class="sidebar__icon">
+                      <use xlink:href="../assets/sprite.svg#icon-dashboard"></use>
+                    </svg>
+                <p class="sidebar__item__title">Dashboard </p>
+              </li>
+              <li class="sidebar__item"> 
+                    <svg class="sidebar__icon">
+                      <use xlink:href="../assets/sprite.svg#icon-product"></use>
+                    </svg>
+                <p class="sidebar__item__title">Product</p>
+                    <svg class="sidebar__icon__right">
+                      <use xlink:href="../assets/sprite.svg#icon-right"></use>
+                    </svg>
+              </li>
+              <li class="sidebar__item current"> 
+                    <svg class="sidebar__icon">
+                      <use xlink:href="../assets/sprite.svg#icon-customers"></use>
+                    </svg>
+                <p class="sidebar__item__title">Customers</p>
+                    <svg class="sidebar__icon__right">
+                      <use xlink:href="../assets/sprite.svg#icon-right"></use>
+                    </svg>
+              </li>
+              <li class="sidebar__item"> 
+                    <svg class="sidebar__icon">
+                      <use xlink:href="../assets/sprite.svg#icon-income"></use>
+                    </svg>
+                <p class="sidebar__item__title">Income</p>
+                    <svg class="sidebar__icon__right">
+                      <use xlink:href="../assets/sprite.svg#icon-right"></use>
+                    </svg>
+              </li>
+              <li class="sidebar__item"> 
+                    <svg class="sidebar__icon">
+                      <use xlink:href="../assets/sprite.svg#icon-promote"></use>
+                    </svg>
+                <p class="sidebar__item__title">Promote</p>
+                    <svg class="sidebar__icon__right">
+                      <use xlink:href="../assets/sprite.svg#icon-right"></use>
+                    </svg>
+              </li>
+              <li class="sidebar__item"> 
+                    <svg class="sidebar__icon">
+                      <use xlink:href="../assets/sprite.svg#icon-help"></use>
+                    </svg>
+                <p class="sidebar__item__title">Help</p>
+                    <svg class="sidebar__icon__right">
+                      <use xlink:href="../assets/sprite.svg#icon-right"></use>
+                    </svg>
+              </li>
+            </ul>
+          </div>
+          <div class="sidebar__user"> <img class="sidebar__user__avatar" src="../assets/user.png" alt="avatar">
+            <div class="sidebar__user__info"> 
+              <p class="sidebar__user__info__name">Evano</p>
+              <p class="sidebar__user__info__position">Project Manager</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </nav>
+    <div class="overlay"></div>
+    <header class="header"> 
+      <h2 class="header__title">Hello Evano 👋🏼,</h2>
+    </header>
+    <div class="customers">
+      <div class="customers__container">
+        <div class="customers__title__container"> 
+          <h1 class="customers__title">All customers</h1>
+          <p class="customers__title__p">Active Members</p>
+        </div>
+        <div class="search__box">
+          <input class="search__input" type="text" placeholder="Search" id="searchInput">
+              <svg class="search__icon">
+                <use xlink:href="../assets/sprite.svg#icon-search"></use>
+              </svg>
+        </div>
+      </div>
+      <div class="customers__table__container"> 
+        <table class="customers__table"> 
+          <thead class="table__thead"> 
+            <tr class="table__tr"> 
+              <th class="table__th">Customer Name </th>
+              <th class="table__th">Company </th>
+              <th class="table__th">Phone Number </th>
+              <th class="table__th">Email </th>
+              <th class="table__th">Country </th>
+              <th class="table__th">Status </th>
+            </tr>
+          </thead>
+          <tbody class="table__body" id="customerTable"></tbody>
+        </table>
+      </div>
+      <div class="pagination">
+        <div class="pagination__info" id="paginationInfo"></div>
+        <div class="pagination__box__btn"> 
+          <button class="pagination__btn" id="prevPage" type="button"> 
+                <svg class="pagination__btn__icon">
+                  <use xlink:href="../assets/sprite.svg#icon-btn-left"></use>
+                </svg>
+          </button>
+          <div class="pagination__numbers"></div>
+          <button class="pagination__btn" id="nextPage" type="button"> 
+                <svg class="pagination__btn__icon">
+                  <use xlink:href="../assets/sprite.svg#icon-btn-right"></use>
+                </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
