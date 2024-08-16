@@ -1,0 +1,27 @@
+include mixin.pug 
+
+- var menuLink = ['Product', 'Customers', 'Income', 'Promote', 'Help']
+nav 
+ +svg('menu', 'sidebar__menu')
+ aside.sidebar
+   .sidebar__container
+    .sidebar__container__nav 
+     p.sidebar__logo 
+      +svg("setting", 'sidebar__logo__icon')
+      |Dashboard 
+      span.sidebar__logo__span v.01
+     ul.sidebar__list
+        li.sidebar__item
+         +svg("dashboard", 'sidebar__icon') 
+         p.sidebar__item__title Dashboard 
+        each value in menuLink
+          li.sidebar__item(class=value == 'Customers' ? 'current' : '') 
+           +svg(value.toLowerCase(), 'sidebar__icon') 
+           p.sidebar__item__title #{value}
+           +svg('right', 'sidebar__icon__right')
+    .sidebar__user 
+     img(src="../assets/user.png", alt="avatar", class="sidebar__user__avatar")
+     .sidebar__user__info 
+       p.sidebar__user__info__name Evano
+       p.sidebar__user__info__position Project Manager
+.overlay

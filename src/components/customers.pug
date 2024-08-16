@@ -1,0 +1,29 @@
+include mixin.pug 
+
+.customers
+  .customers__container
+   .customers__title__container 
+    h1.customers__title All customers
+    p.customers__title__p Active Members
+   .search__box
+    input.search__input(type="text" placeholder="Search" id="searchInput")
+    +svg('search', 'search__icon')
+  .customers__table__container 
+    table.customers__table 
+      thead.table__thead 
+       tr.table__tr 
+        th.table__th Customer Name 
+        th.table__th Company 
+        th.table__th Phone Number 
+        th.table__th Email 
+        th.table__th Country 
+        th.table__th Status 
+      tbody#customerTable.table__body
+  .pagination
+      .pagination__info#paginationInfo
+      .pagination__box__btn 
+       button#prevPage(type="button").pagination__btn 
+        +svg('btn-left', 'pagination__btn__icon')
+       .pagination__numbers
+       button#nextPage(type="button").pagination__btn  
+        +svg('btn-right', 'pagination__btn__icon')

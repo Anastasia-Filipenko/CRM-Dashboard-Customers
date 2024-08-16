@@ -1,0 +1,253 @@
+$mobile: 480px
+$tablet: 768px
+
+.customers
+   flex-direction: column
+   background-color: #FFFFFF
+   width: 968px
+   height: 812px
+   margin-left: 375px
+   border-radius: 30px
+   
+   &__container
+      display: flex
+      justify-content: space-between
+      padding-top: 38px
+      margin-bottom: 40px
+
+   &__title__container
+      margin-left: 38px
+   &__title
+      font-weight: 600
+      font-size: 22px
+      letter-spacing: -0.5px
+      margin-bottom: 7px
+
+   &__title__p
+      color: #16C098
+
+.search
+   &__box
+      display: flex
+      align-items: center
+      position: relative
+      width: 216px
+      margin-right: 53px
+
+   &__input 
+      padding: 10px 15px 10px 40px 
+      border: 1px solid transparent
+      border-radius: 10px 
+      background-color: #F9FBFF
+      font-size: 12px
+      color: #B5B7C0
+      outline: none
+      transition: border-color 1s ease
+      &:active
+         border-color: #7E7E7E
+      &:focus
+         border-color: #7E7E7E
+   &__icon
+      fill: none
+      stroke: #7E7E7E
+      width: 24px
+      height: 24px
+      position: absolute
+      top: 50%
+      left: 10px
+      transform: translateY(-50%)
+
+
+
+.customers__table 
+  width: 968px
+  text-align: left
+  border-collapse: collapse
+  box-sizing: border-box
+  padding: 0 30px
+
+.table 
+   
+   &__thead 
+    background-color: #f9fbff
+    display: table-header-group
+
+   &__th
+       
+      padding: 20px 0 20px 30px
+      font-weight: 500
+      font-size: 14px
+      color: #B5B7C0
+      letter-spacing: -0.5px
+      border-bottom: 1px solid #e2e8f0
+      &:first-child
+         padding: 12px 0 12px 30px
+  
+
+   &__body
+      font-weight: 500
+      font-size: 14px
+      letter-spacing: -0.5px
+
+   &__tr
+      position: relative
+      &::before
+            content: ""
+            position: absolute 
+            bottom: -1px
+            right: 20px
+            width: calc(100% - 50px)
+            border-bottom: 1px solid  #e2e8f0
+            transform: translateZ(0)
+            overflow: hidden
+            z-index: 9
+
+   &__td         
+        padding: 20px 0 20px 30px
+        font-size: 14px
+        color: #2d3748
+        &:first-child
+            padding-left: 30px
+        
+     
+        .status
+          height: 29px
+          width: 80px
+          padding: 5px 10px
+          font-weight: 500
+          border-radius: 4px
+          &.active 
+            background-color: #e6fffa
+            color: #38a169
+            border: 1px solid #38a169
+            padding-left: 18px
+            padding-right: 18px
+          
+          &.inactive 
+            background-color: #fff5f5
+            border: 1px solid #e53e3e
+            color: #e53e3e
+            padding-left: 12px
+            padding-right: 12px
+
+.pagination
+   display: flex
+   justify-content: space-between
+   align-items: center
+   height: 70px
+   &__info
+      color: #B5B7C0
+      font-size: 14px
+      font-weight: 500
+      letter-spacing: -0.5px
+      margin-left: 38px
+   &__box__btn
+      display: flex
+      align-items: center
+      margin-right: 40px
+
+   &__numbers
+      display: flex
+
+   &__btn
+      display: flex
+      align-items: center
+      justify-content: center
+      cursor: pointer
+      color: #404B52
+      background-color: #F5F5F5
+      border-radius: 4px
+      margin-left: 6px
+      margin-right: 6px
+      width: 25px
+      height: 25px
+      border: none
+      font-weight: 500
+      font-size: 12px
+      letter-spacing: -0.5px
+      transition: background-color 1s ease
+      &:hover  
+         color: white
+         background-color: #5932EA
+         .pagination__btn__icon
+            fill: white
+      &__icon
+         width: 8px
+         height: 12px
+         fill: #404B52  
+         
+
+.active
+   background-color: #5932EA
+   color: #FFFFFF
+
+.table__th, .table__td 
+  box-sizing: border-box
+
+
+@media (max-width: $tablet)
+      .customers
+        width: 708px
+        margin-left: 20px
+        &__table
+            width: 700px
+      .table
+         
+         &__th
+            padding: 20px 0 20px 20px
+            &:last-child
+               padding-right:30px
+         &__tr:before
+            right:0
+            width: calc(100% - 30px)
+         &__td
+            font-size: 12px
+            padding: 20px 0 20px 20px
+
+
+@media (max-width: $mobile)
+   .customers  
+        margin-left: 0
+        margin-right: 10px
+        width: 100%
+        height: 200px
+        &__table__container
+            overflow-x: auto
+
+        &__title
+            font-size: 14px
+            &__container
+               margin-left: 20px
+            &__p
+               font-size: 10px
+   .search
+      &__box
+         margin: 0
+   .table
+      &__th
+         font-size: 10px
+         padding: 12px 0 12px 10px
+         :first-child
+            padding: 12px 0 12px 10px
+      &__td
+         font-size: 10px
+         padding: 12px 0 12px 10px
+      &__td .status.inactive 
+            padding-left: 15px
+      &__tr:before
+         right: 28px
+         width: calc(100% - 58px)
+   .pagination
+          flex-direction: column
+          &__info 
+            margin:0
+          &__box__btn
+            margin:0
+          &__box
+             margin: 0
+          &__btn__icon
+            width: 8px
+            height: 12px
+
+      
+         
