@@ -58,16 +58,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.header {
   top: 0;
   left: 0;
   width: 306px;
-  height: 100vh;
+  height: 100%;
 }
 .sidebar__container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   background-color: #ffffff;
 }
 .sidebar__container__nav {
-  height: 100vh;
+  height: 100%;
 }
 .sidebar__menu {
   display: none;
@@ -149,7 +149,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.header {
 .sidebar__user {
   display: flex;
   align-items: center;
-  margin-bottom: 133px;
+  margin-bottom: 76px;
   margin-left: 31px;
   height: 42px;
   transition: transform 1s ease;
@@ -304,8 +304,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.header {
   padding: 12px 0 12px 30px;
 }
 .table__body {
-  padding-left: 30px;
-  padding-right: 30px;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.5px;
@@ -317,8 +315,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.header {
   content: "";
   position: absolute;
   bottom: -1px;
-  right: 30px;
-  width: calc(100% - 60px);
+  right: 20px;
+  width: calc(100% - 50px);
   border-bottom: 1px solid #e2e8f0;
   transform: translateZ(0);
   overflow: hidden;
@@ -418,15 +416,30 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.header {
 @media (max-width: 768px) {
   .customers {
     width: 708px;
-    margin-left: 30px;
+    margin-left: 20px;
   }
   .customers__table {
-    width: 550px;
+    width: 700px;
+  }
+  .table__th {
+    padding: 20px 0 20px 20px;
+  }
+  .table__th:last-child {
+    padding-right: 30px;
+  }
+  .table__tr:before {
+    right: 0;
+    width: calc(100% - 30px);
+  }
+  .table__td {
+    font-size: 12px;
+    padding: 20px 0 20px 20px;
   }
 }
 @media (max-width: 480px) {
   .customers {
     margin-left: 0;
+    margin-right: 10px;
     width: 100%;
     height: 200px;
   }
@@ -455,6 +468,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.header {
   .table__td {
     font-size: 10px;
     padding: 12px 0 12px 10px;
+  }
+  .table__td .status.inactive {
+    padding-left: 15px;
+  }
+  .table__tr:before {
+    right: 28px;
+    width: calc(100% - 58px);
   }
   .pagination {
     flex-direction: column;
@@ -520,7 +540,7 @@ p {
 
 .container {
   display: flex;
-}`, "",{"version":3,"sources":["webpack://./src/styles/components/_header.sass","webpack://./src/styles/index.sass","webpack://./src/styles/components/_sidebar.sass","webpack://./src/styles/components/_customers.sass"],"names":[],"mappings":"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","sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/components/_header.sass","webpack://./src/styles/index.sass","webpack://./src/styles/components/_sidebar.sass","webpack://./src/styles/components/_customers.sass"],"names":[],"mappings":"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","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1094,18 +1114,6 @@ module.exports = /*#__PURE__*/JSON.parse('[{"name":"Jane Cooper","company":"Micr
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -1124,25 +1132,7 @@ module.exports = /*#__PURE__*/JSON.parse('[{"name":"Jane Cooper","company":"Micr
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src;
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) {
-/******/ 					var i = scripts.length - 1;
-/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
-/******/ 				}
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 		__webpack_require__.p = "/CRM-Dashboard-Customers/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
